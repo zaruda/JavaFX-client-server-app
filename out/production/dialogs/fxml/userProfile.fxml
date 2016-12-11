@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.userProfileController">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="192.0" layoutX="113.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/userImage.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="38.0" layoutY="160.0" prefHeight="182.0" prefWidth="279.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="121.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="133.0" text="Имя" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="133.0" text="Фамилия" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="133.0" text="E-mail" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="133.0" text="Имя пользователя" GridPane.rowIndex="3" />
+            <Label fx:id="firstName" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="205.0" GridPane.columnIndex="1" />
+            <Label fx:id="lastName" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="205.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="email" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="205.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

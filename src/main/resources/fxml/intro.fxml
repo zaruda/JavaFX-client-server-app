@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="427.0" style="-fx-background-color: #4c6a92;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IntroController">
+   <children>
+      <VBox alignment="CENTER" layoutX="155.0" layoutY="93.0" prefHeight="124.0" prefWidth="117.0" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="93.0">
+         <children>
+            <JFXButton onAction="#showLoginForm" prefHeight="62.0" prefWidth="117.0" text="Войти" textFill="WHITE" />
+            <JFXButton onAction="#callRegForm" prefHeight="62.0" prefWidth="117.0" text="Регистрация" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="49.0" prefHeight="35.0" prefWidth="279.0" text="Добро пожаловать" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="49.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="254.0" prefHeight="17.0" prefWidth="147.0" text="Powered by Ilya Zarudny">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Blend mode="MULTIPLY" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

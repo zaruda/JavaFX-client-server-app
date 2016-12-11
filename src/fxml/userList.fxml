@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4C6A92;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserListController">
+   <children>
+      <TableView fx:id="usersList" layoutX="14.0" layoutY="13.0" prefHeight="340.0" prefWidth="573.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="59.0" text="ID" />
+          <TableColumn fx:id="nameCol" prefWidth="101.0" text="Имя" />
+            <TableColumn fx:id="surnameCol" minWidth="0.0" prefWidth="125.0" text="Фамилия" />
+            <TableColumn fx:id="emailCol" prefWidth="159.0" text="E-Mail" />
+            <TableColumn fx:id="loginCol" prefWidth="116.0" text="Логин" />
+        </columns>
+      </TableView>
+      </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="371.0" prefWidth="192.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.sidePanelController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/bel_gtk_flag.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="b1" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#changeColor" prefHeight="98.0" prefWidth="200.0" ripplerFill="BLACK" style="-fx-background-color: #f1f1f1;" text="Найти налоги" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/search.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="b2" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="123.0" onAction="#changeColor" prefHeight="98.0" prefWidth="200.0" ripplerFill="BLACK" style="-fx-background-color: #f1f1f1;" text="Просмотреть всю историю" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/look.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="b3" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="197.0" onAction="#changeColor" prefHeight="98.0" prefWidth="200.0" ripplerFill="BLACK" style="-fx-background-color: #f1f1f1;" text="Удалить учетную запись" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/delete.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="exit" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="271.0" onAction="#exit" prefHeight="98.0" prefWidth="200.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Выход" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/exit.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+   </children>
+</VBox>

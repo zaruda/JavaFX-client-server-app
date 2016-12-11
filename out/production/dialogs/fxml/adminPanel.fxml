@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="882.0" prefWidth="1209.0" style="-fx-background-color: #4c6a92;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminPanelController">
+   <children>
+      <VBox layoutX="32.0" layoutY="114.0" prefHeight="524.0" prefWidth="680.0" spacing="10.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <TableView fx:id="carTaxTable" editable="true" prefHeight="178.0" prefWidth="679.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="38.0" text="ID" />
+                <TableColumn fx:id="nameCol" text="Имя" />
+                  <TableColumn fx:id="surnameCol" prefWidth="76.0" text="Фамилия" />
+                  <TableColumn fx:id="emailCol" prefWidth="91.0" text="Email" />
+                  <TableColumn fx:id="carAgeCol" prefWidth="125.0" text="Возраст автомобиля" />
+                  <TableColumn fx:id="engineCol" prefWidth="111.0" text="Объем двигателя" />
+                  <TableColumn fx:id="valueCol" prefWidth="82.0" text="Стоимость" />
+                  <TableColumn fx:id="summaryCol" prefWidth="66.0" text="Налог" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <TableView fx:id="goodsTaxTable" prefHeight="160.0" prefWidth="100.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="goodsIdCol" prefWidth="44.0" text="ID" />
+                  <TableColumn fx:id="goodsNameCol" prefWidth="91.0" text="Имя" />
+                  <TableColumn fx:id="goodsSurnameCol" prefWidth="96.0" text="Фамилия" />
+                  <TableColumn fx:id="goodsEmailCol" prefWidth="111.0" text="Email" />
+                  <TableColumn fx:id="typeCol" prefWidth="108.0" text="Вес покупки" />
+                  <TableColumn fx:id="goodsValueCol" prefWidth="84.0" text="Стоимость" />
+                  <TableColumn fx:id="dateCol" prefWidth="71.0" text="Дата ввоза" />
+                  <TableColumn fx:id="summaryGoodsCol" prefWidth="68.0" text="Налог" />
+               </columns>
+            </TableView>
+            <TableView fx:id="moneyTaxTable" prefHeight="178.0" prefWidth="679.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="moneyIdCol" prefWidth="36.0" text="ID" />
+                <TableColumn fx:id="moneyNameCol" prefWidth="114.99996948242188" text="Имя" />
+                  <TableColumn fx:id="moneySurnameCol" prefWidth="109.0" text="Фамилия" />
+                  <TableColumn fx:id="moneyEmailCol" prefWidth="151.0" text="Email" />
+                  <TableColumn fx:id="moneyValueCol" prefWidth="120.0" text="Денежная сумма" />
+                  <TableColumn fx:id="moneyDateCol" prefWidth="77.0" text="Дата ввоза" />
+                  <TableColumn fx:id="moneySummaryCol" prefWidth="66.0" text="No. декларации" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <PieChart fx:id="pieChart" layoutX="744.0" layoutY="14.0" prefHeight="383.0" prefWidth="450.0" style="-fx-background-color: white" title="Статистика ввозимых товаров" AnchorPane.leftAnchor="744.0" AnchorPane.topAnchor="14.0" />
+      <HBox layoutX="186.0" layoutY="723.0" AnchorPane.leftAnchor="186.0" AnchorPane.topAnchor="723.0">
+         <children>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#loadData" prefHeight="79.0" prefWidth="94.0" ripplerFill="#726a94" text="Обновить" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#loadUsersList" prefHeight="79.0" prefWidth="100.0" ripplerFill="#726a94" text="Пользователи" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#serverControl" prefHeight="79.0" prefWidth="144.0" ripplerFill="#726a94" text="Управление сервером" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/server.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#exit" prefHeight="78.0" prefWidth="112.0" ripplerFill="#726a94" text="Выход" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/exitadmin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="32.0" layoutY="27.0" prefHeight="62.0" prefWidth="379.0" text="Панель администратора" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="barChart" categoryGap="7.0" layoutX="745.0" layoutY="405.0" prefHeight="357.0" prefWidth="450.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

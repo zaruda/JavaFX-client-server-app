@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <children>
+      <JFXTabPane layoutX="3.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="449.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Автомобиль">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="268.0">
+                     <children>
+                        <GridPane layoutX="10.0" layoutY="32.0" prefHeight="285.0" prefWidth="406.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="147.0" text="Объем двигателя (в кубических сантиметрах)" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="73.0" prefWidth="142.0" text="Стоимость автомобиля в евро" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="182.0" text="Введите возраст автомобиля" textAlignment="CENTER" wrapText="true">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <JFXTextField fx:id="carAge" labelFloat="true" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="engineSize" labelFloat="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="carValue" labelFloat="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="185.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="159.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <JFXButton buttonType="RAISED" layoutX="189.0" layoutY="317.0" onAction="#calculateCarTax" text="Раcсчитать" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Покупки">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="10.0" layoutY="21.0" prefHeight="301.0" prefWidth="398.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="21.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="104.0" prefWidth="249.0" text="Введите стоимость покупки" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="88.0" prefWidth="202.0" text="Вес покупки, кг">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="401.0" text="Дата ввоза" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <JFXTextField fx:id="goodsWeight" labelFloat="true" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="goodsCost" labelFloat="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXDatePicker fx:id="goodsDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="185.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="159.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <JFXButton layoutX="189.0" layoutY="322.0" onAction="#calculateGoodsTax" text="Расcчитать" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Денежная сумма">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="440.0">
+                     <children>
+                        <GridPane layoutX="10.0" layoutY="12.0" prefHeight="299.0" prefWidth="378.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="229.0" text="Денежная сумма, ввозимая через границу" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <JFXToggleButton fx:id="toggleType" prefHeight="56.0" prefWidth="145.0" text=" " textFill="#d0d0d0" GridPane.columnIndex="1" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="193.0" prefWidth="417.0" text="Связанно ли эти средства с предпринимательской деятельностью" textAlignment="CENTER" wrapText="true">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="126.0" prefWidth="351.0" text="Дата ввоза" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <JFXTextField fx:id="moneyAmount" labelFloat="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXDatePicker fx:id="moneyDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="185.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="159.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <JFXButton layoutX="136.0" layoutY="317.0" onAction="#calculateMoneyTax" text="Задекларировать" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXHamburger fx:id="hamburger" layoutX="403.0" layoutY="356.0" />
+      <JFXDrawer fx:id="menu" defaultDrawerSize="200.0" layoutY="36.0" prefHeight="371.0" prefWidth="192.0" />
+      <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="413.0" layoutY="3.0" onMouseClicked="#showUserProfile" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/userImage.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
